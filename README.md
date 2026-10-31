@@ -1,6 +1,6 @@
 # Tres en Raya RD 🇩🇴
 
-**Nombre completo:** [TU NOMBRE COMPLETO]
+**Nombre completo:** Ismailyn Reyes
 
 ## Descripción del juego
 
@@ -24,8 +24,7 @@ Los colores de la interfaz son los de la bandera dominicana (azul, blanco y rojo
 - Usar `localStorage` con validación, para que un dato dañado no rompa la aplicación.
 
 ## Qué parte fue más difícil
-
-[Completa con tu experiencia real, por ejemplo: la lógica de detección del ganador, o hacer que el estado cargado desde localStorage funcionara bien al recargar.]
+SUBIRLOOOO A la plataforma UASD Virtual. LOL
 
 ## Cómo ejecutar
 
