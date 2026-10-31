@@ -1,0 +1,146 @@
+/* Colores de la bandera dominicana */
+:root {
+  --azul: #002d62;
+  --rojo: #ce1126;
+  --blanco: #ffffff;
+  --dorado: #f5c542;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--blanco);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* Fondo con cruz de la bandera */
+  background:
+    linear-gradient(90deg, transparent 44%, var(--blanco) 44%, var(--blanco) 56%, transparent 56%),
+    linear-gradient(0deg, transparent 44%, var(--blanco) 44%, var(--blanco) 56%, transparent 56%),
+    linear-gradient(135deg, var(--azul) 0%, var(--azul) 50%, var(--rojo) 50%, var(--rojo) 100%);
+  background-attachment: fixed;
+}
+
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 2rem 1rem;
+  background: rgba(0, 45, 98, 0.78);
+  backdrop-filter: blur(3px);
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 var(--rojo);
+}
+
+.subtitulo {
+  margin: 0.3rem 0 0;
+  color: var(--dorado);
+  font-weight: 600;
+}
+
+.mensaje {
+  margin: 0;
+  min-height: 1.6rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mensaje.final {
+  color: var(--dorado);
+  font-size: 1.3rem;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: min(90vw, 320px);
+  padding: 10px;
+  background: var(--blanco);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.celda {
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: 10px;
+  background: #e8edf5;
+  font-size: 2.6rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.2s ease;
+}
+
+.celda:not(:disabled):hover {
+  background: #d3dcec;
+  transform: scale(1.04);
+}
+
+.celda-x {
+  color: var(--azul);
+}
+
+.celda-o {
+  color: var(--rojo);
+}
+
+.celda.ganadora {
+  background: var(--dorado);
+  animation: latido 0.6s ease-in-out infinite alternate;
+}
+
+.celda:disabled {
+  cursor: default;
+}
+
+@keyframes latido {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.reiniciar {
+  padding: 0.7rem 1.6rem;
+  border: 2px solid var(--blanco);
+  border-radius: 999px;
+  background: var(--rojo);
+  color: var(--blanco);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.reiniciar:hover {
+  background: var(--blanco);
+  color: var(--rojo);
+}
+
+footer {
+  display: flex;
+  width: min(90vw, 320px);
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.franja { flex: 1; }
+.franja.azul { background: var(--azul); }
+.franja.blanca { background: var(--blanco); }
+.franja.roja { background: var(--rojo); }

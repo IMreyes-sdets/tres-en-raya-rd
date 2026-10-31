@@ -1,0 +1,10 @@
+EVIDENCIA DE HISTORIAL DE DESARROLLO
+Proyecto: Tres en Raya RD
+Estudiante: [TU NOMBRE COMPLETO]
+
+Reemplaza esta plantilla con el historial REAL de tu trabajo.
+Puedes pegar aquí el resultado de `git log --oneline`, o anotar
+cada paso que diste: fecha, qué hiciste y qué problema resolviste.
+
+Ejemplo de formato:
+[fecha] - [paso realizado] - [observación]
